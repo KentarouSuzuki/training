@@ -21,7 +21,7 @@ lazy val cats = (project in file("cats"))
       "org.typelevel" %% "cats-core" % catsVersion,
       "org.typelevel" %% "cats-free" % catsVersion,
       "org.typelevel" %% "cats-laws" % catsVersion,
-      "org.typelevel" %% "cats-mtl-core" % "0.2.1",
+      "org.typelevel" %% "cats-mtl-core" % "0.2.2",
       "org.typelevel" %% "algebra" % "1.0.1",
       "org.typelevel" %% "algebra-laws" % "1.0.1",
       "com.github.mpilquist" %% "simulacrum" % "0.19.0",

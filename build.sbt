@@ -8,7 +8,8 @@ lazy val root = (project in file("."))
       commonSettings,
       name := "root"
     ).aggregate(
-      cats
+      cats,
+      geoCoordinateIndex
     )
 
 lazy val catsVersion = "2.0.0-M4"
@@ -43,5 +44,14 @@ lazy val cats = (project in file("cats"))
       "-Ypartial-unification",
       "-feature",
       "-language:_"
+    )
+  )
+
+lazy val geoCoordinateIndex = (project in file("geo-coordinate-index"))
+  .settings(
+    commonSettings,
+    name := "geo-coordinate-index",
+    libraryDependencies ++= Seq(
+      "org.typelevel" %% "cats-core" % catsVersion
     )
   )
